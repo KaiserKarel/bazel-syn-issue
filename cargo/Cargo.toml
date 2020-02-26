@@ -1,0 +1,17 @@
+[package]
+name = "bazel-syn-issue"
+version = "0.1.0"
+authors = ["Kaiserkarel <k.l.kubat@gmail.com>"]
+edition = "2018"
+
+[lib]
+path = "fake_lib.rs"
+
+[dependencies]
+serde = { version = "1.0.1", features = ["derive"] }
+
+[raze]
+# The WORKSPACE relative path to the Cargo.toml working directory.
+workspace_path = "//cargo"
+target = "x86_64-unknown-linux-gnu"
+
